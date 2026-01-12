@@ -57,6 +57,14 @@
           "deps": []
         }
       ]
+    },
+    "scriptDeps": {
+      "items": [
+        {
+          "ref": "rental_agencies_geocode",
+          "deps": []
+        }
+      ]
     }
   },
   "outputs": {
