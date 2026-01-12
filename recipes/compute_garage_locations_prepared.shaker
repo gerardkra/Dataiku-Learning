@@ -17,6 +17,42 @@
       {
         "d": true,
         "name": "geopoint"
+      },
+      {
+        "d": true,
+        "name": "city"
+      },
+      {
+        "d": true,
+        "name": "city_enName"
+      },
+      {
+        "d": true,
+        "name": "department"
+      },
+      {
+        "d": true,
+        "name": "department_enName"
+      },
+      {
+        "d": true,
+        "name": "region"
+      },
+      {
+        "d": true,
+        "name": "region_enName"
+      },
+      {
+        "d": true,
+        "name": "country_iso"
+      },
+      {
+        "d": true,
+        "name": "country"
+      },
+      {
+        "d": true,
+        "name": "country_enName"
       }
     ]
   },
@@ -267,7 +303,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "GeoPointCreator",
@@ -275,6 +311,21 @@
         "out_column": "geopoint",
         "lat_column": "latitude",
         "lon_column": "longitude"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CityLevelReverseGeocoder",
+      "params": {
+        "doOutputBoundaries": false,
+        "l4OutCol": "region",
+        "l2OutCol": "country",
+        "inputCol": "geopoint",
+        "l6OutCol": "department",
+        "l8OutCol": "city"
       },
       "alwaysShowComment": false
     }
@@ -308,31 +359,42 @@
   "columnWidthsByName": {
     "line_0_7": 267,
     "line_0_6": 106,
+    "country": 134,
     "line_0_9": 300,
     "line_0_8": 100,
+    "departement": 134,
+    "region_enName": 197,
     "line_0_3": 100,
     "line_0_2": 239,
+    "city": 176,
     "line": 300,
     "line_0_5": 100,
     "line_0_4": 239,
     "latitude": 134,
     "line_0_1": 100,
     "line_0_0": 246,
+    "city_enName": 176,
     "line_0_0_0": 134,
     "line_0_0_1": 155,
+    "department": 134,
+    "country_iso": 100,
     "longitude": 155,
     "line_1": 300,
     "line_2": 300,
     "line_0": 300,
     "line_0_12": 113,
+    "country_enName": 120,
     "line_0_11": 100,
     "geopoint": 300,
     "line_0_10": 113,
+    "department_enName": 143,
     "line_0_15": 113,
     "line_0_14": 113,
     "line_0_13": 239,
+    "departement_enName": 150,
     "name": 246,
-    "h1 class\u003d\"\"\"\"left\"\"\"\"\u003e\u0027 + \u00270": 300
+    "h1 class\u003d\"\"\"\"left\"\"\"\"\u003e\u0027 + \u00270": 300,
+    "region": 197
   },
   "sorting": [],
   "globalSearchQuery": "",
