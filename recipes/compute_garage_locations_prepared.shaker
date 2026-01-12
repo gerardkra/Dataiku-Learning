@@ -24,23 +24,11 @@
       },
       {
         "d": true,
-        "name": "city_enName"
-      },
-      {
-        "d": true,
         "name": "department"
       },
       {
         "d": true,
-        "name": "department_enName"
-      },
-      {
-        "d": true,
         "name": "region"
-      },
-      {
-        "d": true,
-        "name": "region_enName"
       },
       {
         "d": true,
@@ -49,10 +37,6 @@
       {
         "d": true,
         "name": "country"
-      },
-      {
-        "d": true,
-        "name": "country_enName"
       }
     ]
   },
@@ -315,7 +299,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "CityLevelReverseGeocoder",
@@ -326,6 +310,23 @@
         "inputCol": "geopoint",
         "l6OutCol": "department",
         "l8OutCol": "city"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "country_enName",
+          "region_enName",
+          "department_enName",
+          "city_enName"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     }
