@@ -17,6 +17,10 @@
       {
         "d": true,
         "name": "city"
+      },
+      {
+        "d": true,
+        "name": "address_full"
       }
     ]
   },
@@ -69,7 +73,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "TextSimplifierProcessor",
@@ -80,6 +84,22 @@
         "language": "english",
         "clearStopWords": false,
         "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsConcat",
+      "params": {
+        "outputColumn": "address_full",
+        "columns": [
+          "adress",
+          "zipcode",
+          "city"
+        ],
+        "join": " "
       },
       "alwaysShowComment": false
     }
