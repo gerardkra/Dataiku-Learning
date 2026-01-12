@@ -107,14 +107,10 @@
       {"name":"longitude","type":"double"},
       {"name":"geopoint","type":"string"},
       {"name":"city","type":"string"},
-      {"name":"city_enName","type":"string"},
       {"name":"department","type":"string"},
-      {"name":"department_enName","type":"string"},
       {"name":"region","type":"string"},
-      {"name":"region_enName","type":"string"},
       {"name":"country_iso","type":"string"},
-      {"name":"country","type":"string"},
-      {"name":"country_enName","type":"string"}
+      {"name":"country","type":"string"}
     ],
     "userModified": true
   },
