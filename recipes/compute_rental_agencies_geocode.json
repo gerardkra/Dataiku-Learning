@@ -2,7 +2,15 @@
   "type": "CustomCode_forward_geocoding",
   "neverRecomputeExistingPartitions": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "cache_enabled": true,
+      "batch_enabled": true,
+      "batch_size_bing": 50,
+      "batch_size_uscensus": 1000,
+      "column_prefix": "geo",
+      "address_column": "address_full",
+      "provider": "osm"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
