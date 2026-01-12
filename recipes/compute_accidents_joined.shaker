@@ -89,6 +89,18 @@
       {
         "d": true,
         "name": "station_join_distance"
+      },
+      {
+        "d": true,
+        "name": "garage_name"
+      },
+      {
+        "d": true,
+        "name": "garage_geopoint"
+      },
+      {
+        "d": true,
+        "name": "garage_join_distance"
       }
     ]
   },
@@ -126,7 +138,7 @@
   },
   "steps": [
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "NearestNeighbourGeoJoiner",
@@ -143,6 +155,26 @@
         "leftLatCol": "latitude",
         "rightLonCol": "geolongitude",
         "rightInput": "rental_agencies_geocode"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "NearestNeighbourGeoJoiner",
+      "params": {
+        "rightLatCol": "latitude",
+        "copyColumns": [
+          "name",
+          "geopoint"
+        ],
+        "prefix": "garage_",
+        "leftLonCol": "longitude",
+        "useMiles": false,
+        "leftLatCol": "latitude",
+        "rightLonCol": "longitude",
+        "rightInput": "garage_locations_prepared"
       },
       "alwaysShowComment": false
     }
@@ -186,19 +218,23 @@
     "datetime": 183,
     "station_agency_name": 158,
     "hrmn": 100,
+    "garage_join_distance": 165,
     "department": 134,
     "day": 100,
     "country_iso": 100,
     "longitude": 134,
     "agency_name": 100,
     "station_geolatitude": 158,
+    "garage_geopoint": 300,
     "geolatitude": 100,
     "geopoint": 183,
     "station_geolongitude": 165,
+    "garage_name": 246,
     "station_join_distance": 173,
     "collision": 100,
     "month": 100,
     "id_num": 100,
+    "name": 246,
     "weekofyear": 100,
     "region": 197
   },
