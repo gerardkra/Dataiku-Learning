@@ -28,6 +28,10 @@
       },
       {
         "d": true,
+        "name": "weekofyear"
+      },
+      {
+        "d": true,
         "name": "agglomeration"
       },
       {
@@ -106,7 +110,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "ColumnsConcat",
@@ -119,6 +123,44 @@
           "hrmn"
         ],
         "join": "-"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "",
+        "formats": [
+          "yyyy-MM-ddZ"
+        ],
+        "columns": [
+          "datetime"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "en_US",
+        "outType": {
+          "name": "out",
+          "type": "date"
+        }
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateComponentsExtractor",
+      "params": {
+        "outMonthColumn": "",
+        "outYearColumn": "",
+        "column": "datetime",
+        "timezone_id": "UTC",
+        "outDayColumn": "",
+        "outWeekOfYearColumn": "weekofyear"
       },
       "alwaysShowComment": false
     }
@@ -150,16 +192,21 @@
   },
   "analysisColumnData": {},
   "columnWidthsByName": {
+    "year": 100,
+    "latitude": 100,
+    "agglomeration": 113,
+    "adress": 120,
+    "datetime_year": 113,
     "collision": 100,
     "datetime": 120,
     "month": 100,
-    "year": 100,
-    "latitude": 100,
     "id_num": 100,
     "hrmn": 100,
-    "agglomeration": 113,
-    "adress": 120,
+    "datetime_parsed": 183,
+    "datetime_month": 120,
+    "weekofyear": 100,
     "day": 100,
+    "datetime_day": 105,
     "longitude": 100
   },
   "sorting": [],
