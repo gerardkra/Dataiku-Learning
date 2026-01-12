@@ -49,6 +49,10 @@
       {
         "d": true,
         "name": "longitude"
+      },
+      {
+        "d": true,
+        "name": "geopoint"
       }
     ]
   },
@@ -177,7 +181,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "CreateColumnWithGREL",
@@ -185,6 +189,18 @@
         "expression": "longitude / 100000",
         "column": "longitude",
         "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoPointCreator",
+      "params": {
+        "out_column": "geopoint",
+        "lat_column": "latitude",
+        "lon_column": "longitude"
       },
       "alwaysShowComment": false
     }
@@ -218,6 +234,7 @@
   "columnWidthsByName": {
     "year": 100,
     "latitude": 100,
+    "geopoint": 183,
     "agglomeration": 113,
     "adress": 120,
     "datetime_year": 113,
