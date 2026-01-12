@@ -95,13 +95,13 @@
     "columns": [
       {"name":"agency_name","type":"string"},
       {"name":"adress","type":"string"},
-      {"name":"zipcode","type":"bigint","meaning":"Text"},
+      {"name":"zipcode","type":"bigint"},
       {"name":"city","type":"string"},
       {"name":"address_full","type":"string"},
       {"name":"geolatitude","type":"string"},
       {"name":"geolongitude","type":"string"}
     ],
-    "userModified": true
+    "userModified": false
   },
   "typeSystemVersion": "V2",
   "dkuProperties": [],
