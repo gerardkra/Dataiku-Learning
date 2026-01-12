@@ -98,7 +98,7 @@
       {"name":"zipcode","type":"bigint"},
       {"name":"city","type":"string"},
       {"name":"address_full","type":"string"},
-      {"name":"geolatitude","type":"string","meaning":"FreeText"},
+      {"name":"geolatitude","type":"string","meaning":"Text"},
       {"name":"geolongitude","type":"string"}
     ],
     "userModified": true
