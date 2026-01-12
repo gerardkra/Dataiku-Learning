@@ -5,6 +5,26 @@
       {
         "d": true,
         "name": "line"
+      },
+      {
+        "d": true,
+        "name": "line_0"
+      },
+      {
+        "d": true,
+        "name": "line_0_0"
+      },
+      {
+        "d": true,
+        "name": "line_0_0_0"
+      },
+      {
+        "d": true,
+        "name": "line_0_0_1"
+      },
+      {
+        "d": true,
+        "name": "name"
       }
     ]
   },
@@ -42,7 +62,7 @@
   },
   "steps": [
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "FilterOnValue",
@@ -60,6 +80,153 @@
         "appliesTo": "SINGLE_COLUMN",
         "exclude": false,
         "processNullOrEmptyValues": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "Parse garage name",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "designTimeReport": {
+            "report": {
+              "createdColumnCount": 1
+            }
+          },
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnSplitter",
+          "params": {
+            "inCol": "line",
+            "startFrom": "end",
+            "keepEmptyChunks": false,
+            "limit": 1,
+            "separator": "h1 class\u003d\"\"\"\"left\"\"\"\"\u003e\u0027 + \u0027",
+            "outColPrefix": "line_",
+            "limitOutput": true,
+            "target": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "designTimeReport": {
+            "report": {
+              "createdColumnCount": 1
+            }
+          },
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnSplitter",
+          "params": {
+            "inCol": "line_0",
+            "startFrom": "beginning",
+            "keepEmptyChunks": false,
+            "limit": 1,
+            "separator": "\u0027 + \u0027",
+            "outColPrefix": "line_0_",
+            "limitOutput": true,
+            "target": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "line_0"
+            ],
+            "keep": false,
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "line_0_0",
+                "to": "name"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 1
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "line",
+        "startFrom": "end",
+        "keepEmptyChunks": false,
+        "limit": 1,
+        "separator": "LatLng(",
+        "outColPrefix": "line_",
+        "limitOutput": true,
+        "target": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 1
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "line_0",
+        "startFrom": "beginning",
+        "keepEmptyChunks": false,
+        "limit": 1,
+        "separator": "),icon",
+        "outColPrefix": "line_0_",
+        "limitOutput": true,
+        "target": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 2
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "line_0_0",
+        "keepEmptyChunks": false,
+        "limit": 0,
+        "separator": ",",
+        "outColPrefix": "line_0_0_",
+        "limitOutput": false,
+        "target": "COLUMNS"
       },
       "alwaysShowComment": false
     }
@@ -91,7 +258,30 @@
   },
   "analysisColumnData": {},
   "columnWidthsByName": {
-    "line": 300
+    "line_1": 300,
+    "line_0_7": 267,
+    "line_2": 300,
+    "line_0_6": 106,
+    "line_0_9": 300,
+    "line_0": 300,
+    "line_0_8": 100,
+    "line_0_3": 100,
+    "line_0_2": 239,
+    "line": 300,
+    "line_0_5": 100,
+    "line_0_4": 239,
+    "line_0_12": 113,
+    "line_0_11": 100,
+    "line_0_1": 100,
+    "line_0_10": 113,
+    "line_0_0": 246,
+    "line_0_15": 113,
+    "line_0_14": 113,
+    "line_0_13": 239,
+    "line_0_0_0": 134,
+    "name": 246,
+    "line_0_0_1": 155,
+    "h1 class\u003d\"\"\"\"left\"\"\"\"\u003e\u0027 + \u00270": 300
   },
   "sorting": [],
   "globalSearchQuery": "",
