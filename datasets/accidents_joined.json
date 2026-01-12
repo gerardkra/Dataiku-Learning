@@ -110,7 +110,11 @@
       {"name":"department","type":"string"},
       {"name":"region","type":"string"},
       {"name":"country_iso","type":"string"},
-      {"name":"country","type":"string"}
+      {"name":"country","type":"string"},
+      {"name":"station_agency_name","type":"string"},
+      {"name":"station_geolatitude","type":"string"},
+      {"name":"station_geolongitude","type":"string"},
+      {"name":"station_join_distance","type":"string"}
     ],
     "userModified": true
   },
