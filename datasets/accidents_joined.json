@@ -114,7 +114,10 @@
       {"name":"station_agency_name","type":"string"},
       {"name":"station_geolatitude","type":"string"},
       {"name":"station_geolongitude","type":"string"},
-      {"name":"station_join_distance","type":"string"}
+      {"name":"station_join_distance","type":"string"},
+      {"name":"garage_name","type":"string"},
+      {"name":"garage_geopoint","type":"string"},
+      {"name":"garage_join_distance","type":"double"}
     ],
     "userModified": true
   },
