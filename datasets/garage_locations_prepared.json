@@ -93,12 +93,10 @@
   },
   "schema": {
     "columns": [
-      {"name":"line","type":"string"},
-      {"name":"line_0","type":"string"},
-      {"name":"line_0_0","type":"string"},
-      {"name":"line_0_0_0","type":"double"},
-      {"name":"line_0_0_1","type":"double"},
-      {"name":"name","type":"string"}
+      {"name":"latitude","type":"double"},
+      {"name":"longitude","type":"double"},
+      {"name":"name","type":"string"},
+      {"name":"geopoint","type":"string"}
     ],
     "userModified": true
   },
