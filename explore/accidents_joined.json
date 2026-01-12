@@ -883,6 +883,8 @@
               "label": "Natural ordering",
               "sortAscending": true
             },
+            "prefix": "",
+            "suffix": "",
             "multiplier": "Auto",
             "hideTrailingZeros": true,
             "digitGrouping": "DEFAULT",
