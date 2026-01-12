@@ -17,10 +17,6 @@
       {
         "d": true,
         "name": "city"
-      },
-      {
-        "d": true,
-        "name": "address_full"
       }
     ]
   },
@@ -76,15 +72,14 @@
       "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "ColumnsConcat",
+      "type": "TextSimplifierProcessor",
       "params": {
-        "outputColumn": "address_full",
-        "columns": [
-          "adress",
-          "zipcode",
-          "city"
-        ],
-        "join": " "
+        "inCol": "city",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
       },
       "alwaysShowComment": false
     }
