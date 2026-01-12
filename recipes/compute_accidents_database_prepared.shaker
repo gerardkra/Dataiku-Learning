@@ -150,7 +150,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "DateComponentsExtractor",
@@ -161,6 +161,30 @@
         "timezone_id": "UTC",
         "outDayColumn": "",
         "outWeekOfYearColumn": "weekofyear"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "latitude / 100000",
+        "column": "latitude",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "longitude / 100000",
+        "column": "longitude",
+        "errorColumn": ""
       },
       "alwaysShowComment": false
     }
