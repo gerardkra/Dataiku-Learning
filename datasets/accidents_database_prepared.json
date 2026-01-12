@@ -104,7 +104,8 @@
       {"name":"collision","type":"bigint"},
       {"name":"adress","type":"string"},
       {"name":"latitude","type":"bigint"},
-      {"name":"longitude","type":"bigint"}
+      {"name":"longitude","type":"bigint"},
+      {"name":"geopoint","type":"string"}
     ],
     "userModified": true
   },
