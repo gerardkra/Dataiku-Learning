@@ -4,27 +4,19 @@
     "list": [
       {
         "d": true,
-        "name": "line"
+        "name": "latitude"
       },
       {
         "d": true,
-        "name": "line_0"
-      },
-      {
-        "d": true,
-        "name": "line_0_0"
-      },
-      {
-        "d": true,
-        "name": "line_0_0_0"
-      },
-      {
-        "d": true,
-        "name": "line_0_0_1"
+        "name": "longitude"
       },
       {
         "d": true,
         "name": "name"
+      },
+      {
+        "d": true,
+        "name": "geopoint"
       }
     ]
   },
@@ -167,66 +159,122 @@
     },
     {
       "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 1
-        }
-      },
-      "metaType": "PROCESSOR",
+      "name": "Parse lat/lon coordinates",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "line",
-        "startFrom": "end",
-        "keepEmptyChunks": false,
-        "limit": 1,
-        "separator": "LatLng(",
-        "outColPrefix": "line_",
-        "limitOutput": true,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 1
+      "steps": [
+        {
+          "preview": false,
+          "designTimeReport": {
+            "report": {
+              "createdColumnCount": 1
+            }
+          },
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnSplitter",
+          "params": {
+            "inCol": "line",
+            "startFrom": "end",
+            "keepEmptyChunks": false,
+            "limit": 1,
+            "separator": "LatLng(",
+            "outColPrefix": "line_",
+            "limitOutput": true,
+            "target": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "designTimeReport": {
+            "report": {
+              "createdColumnCount": 1
+            }
+          },
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnSplitter",
+          "params": {
+            "inCol": "line_0",
+            "startFrom": "beginning",
+            "keepEmptyChunks": false,
+            "limit": 1,
+            "separator": "),icon",
+            "outColPrefix": "line_0_",
+            "limitOutput": true,
+            "target": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "designTimeReport": {
+            "report": {
+              "createdColumnCount": 2
+            }
+          },
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnSplitter",
+          "params": {
+            "inCol": "line_0_0",
+            "keepEmptyChunks": false,
+            "limit": 0,
+            "separator": ",",
+            "outColPrefix": "line_0_0_",
+            "limitOutput": false,
+            "target": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "line_0_0_0",
+                "to": "latitude"
+              },
+              {
+                "from": "line_0_0_1",
+                "to": "longitude"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "line",
+              "line_0_0",
+              "line_0"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
         }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "line_0",
-        "startFrom": "beginning",
-        "keepEmptyChunks": false,
-        "limit": 1,
-        "separator": "),icon",
-        "outColPrefix": "line_0_",
-        "limitOutput": true,
-        "target": "COLUMNS"
-      },
+      ],
       "alwaysShowComment": false
     },
     {
       "preview": true,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 2
-        }
-      },
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "ColumnSplitter",
+      "type": "GeoPointCreator",
       "params": {
-        "inCol": "line_0_0",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": ",",
-        "outColPrefix": "line_0_0_",
-        "limitOutput": false,
-        "target": "COLUMNS"
+        "out_column": "geopoint",
+        "lat_column": "latitude",
+        "lon_column": "longitude"
       },
       "alwaysShowComment": false
     }
@@ -258,29 +306,32 @@
   },
   "analysisColumnData": {},
   "columnWidthsByName": {
-    "line_1": 300,
     "line_0_7": 267,
-    "line_2": 300,
     "line_0_6": 106,
     "line_0_9": 300,
-    "line_0": 300,
     "line_0_8": 100,
     "line_0_3": 100,
     "line_0_2": 239,
     "line": 300,
     "line_0_5": 100,
     "line_0_4": 239,
+    "latitude": 134,
+    "line_0_1": 100,
+    "line_0_0": 246,
+    "line_0_0_0": 134,
+    "line_0_0_1": 155,
+    "longitude": 155,
+    "line_1": 300,
+    "line_2": 300,
+    "line_0": 300,
     "line_0_12": 113,
     "line_0_11": 100,
-    "line_0_1": 100,
+    "geopoint": 300,
     "line_0_10": 113,
-    "line_0_0": 246,
     "line_0_15": 113,
     "line_0_14": 113,
     "line_0_13": 239,
-    "line_0_0_0": 134,
     "name": 246,
-    "line_0_0_1": 155,
     "h1 class\u003d\"\"\"\"left\"\"\"\"\u003e\u0027 + \u00270": 300
   },
   "sorting": [],
