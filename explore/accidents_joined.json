@@ -4086,7 +4086,58 @@
         "groupDimension": [],
         "xMeasure": [],
         "yMeasure": [],
-        "colorMeasure": [],
+        "colorMeasure": [
+          {
+            "column": "station_join_distance",
+            "function": "COUNTD",
+            "type": "ALPHANUM",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "isUnaggregated": false,
+            "uaComputeMode": "STACK",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "hideTrailingZeros": true,
+            "prefix": "",
+            "suffix": "",
+            "percentile": 50.0,
+            "isCustomPercentile": false,
+            "kpiTextAlign": "CENTER",
+            "responsiveTextAreaFill": 0,
+            "valueTextFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "labelTextFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "valuesInChartDisplayOptions": {
+              "displayValues": true,
+              "textFormatting": {
+                "fontSize": 11,
+                "fontColor": "AUTO",
+                "hasBackground": false,
+                "backgroundColor": "#D9D9D9BF"
+              },
+              "addDetails": false,
+              "additionalMeasures": [],
+              "placementMode": "AUTO",
+              "spacing": 12
+            },
+            "colorRules": []
+          }
+        ],
         "sizeMeasure": [],
         "geometry": [
           {
@@ -4488,7 +4539,7 @@
           },
           "displayPointer": false
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAFd0lEQVR4AeyZTWhcVRTH/+clbW1LURFEusikMdouihu/oLQL4xeapGJaiujCkmIQbHFRyQhustMEJWhdqMWq4BdWN82HolXBWrBFrJRWqEJtgq2ltBhJ0qrJvOP/vkk6kGaSCV3dM+dx7z33a+D+z49z73tzE/hj2gMO2DRewAE7YOMeMC7PI9gBG/eAcXkewQ7YuAeMy6vWCDaOtSTPAZd8YbLmgE1iLYlywCVfmKw5YJNYS6IccMkXJmsO2CTWkigHXPKFyZoDNom1JGoG4NKA12x4wAHb4FhWhQMu6xobAw7YBseyKhxwWdfYGHDANjiWVeGAy7rGxoADtsGxrIqqApzL9x+b3RN2e6sKMFQHc539p+zivFJZdQHO9OsnuXzf/qxaBUXVAF71wkAu8BQkj6niPKrkMQv49o43F00zzHX29aUT6TMKrFCkHwswzL6exh2DS6bnWLVmAV9Yeevy+ucHtgZwBHoXBMtoR0N7Ok8sLeyqy/cdmm5btGYBn+q6Z0RTXRsiVQWnobgIkScIMWh+kDakEYE08O36q4b8vrrQYS0HsaY05fIDH1wWJLoGkPtFMYbi8zlNSqilN2nVd/h2faSA5DmOmUumAGfRCm3jW/LeXL7/byA5gQSNPHt/COQEuDlYRnQTo3kr847QZk4I+R9ac2luwPHJXSXQcwL5A9CjjNxl3Jp3Q3Ad+BB0owgWAzJKoO8y70LxSSHSUqzaKhNTckTqAflRVScSTQ4rlGettBPyCAQNBPqRKv6Dpu+zvRHhEbkXkOCHPTD4BGFmZA11t9zJvAkiO1NJb5NEDhDmWyLyNCGfpNCEY40Q3MD2PtrHofq1CDoY3f9y3FxKzCmiIEKuIcAjqmkDm2Sob0CkjbmVW/fvHLsQ+mk/lCRZoqq7h7tbprfrbMhKYRJwgMOoXMMz+KdQh6AdqX7B8/k4oRaKfVILke3cxjcP9bTuzPoMFmYBK2RSgeK2q9hDmMK35zGBLILgAYb1JPPrkqb9BrlelmQWMLfpNqrkSxbLYroWKc5CtJ5R/KVCHgrdKskG3jCF8zk0zWWzgAMpTeRR2imNeoZ1Bi1+g8i2RHAwtHkm888P/bRYt1dOibcnbEpRL2G2M1pvzNqCtZlVfTsFmgSoYzQXMpsNTBWGjGnAWqh9mSHbz5erc2S2kTCPQbCZ+Rb2jfFMHmd/jfJ2idZkMg04SSZ7Se0sc0j87pV2QA5C5YwoDkERPpcKKjVm74dNAwZ43rKAyCYVuZvnLf/4UP7nrOOM2tEwlGUpbM+swcI0YH7jXk9mT3Kb/ozn7E2A/AngL2YQ+rNQaQKwVDSppTWZTAPmNnyU1N4j3NWq6SBBT10bykrWX+Un0zccv6RIV/D26QDr5pJpwBDUMN/H7fhEItKM8GS3RvxkSpJHAFkOYL2IHOd38wbWzSXbgBUFKPYjgyq/FOnJ4knUvDb0UvNqncAr7Pt+6JrmdbQmk2nA/I+5k9TW84rwsKr+StBtInr+dM/DvC/mt1Fvy8lsTpfws5gzQ+r61tR5vCDAQX9smQDXDd9xcRstYevPmup3c2nIXRp/ca7x2MbMA86AbNlSCHaouzXcHBF0aM2SVfn/h/LInmUs0q7qAFwpHO7f3MafqnR6DPMc8ExKqntndsXcdsAz6PGs7pjRFXXTAUeNb/7FO+D5fRT1DAccNb75F++A5/cRYp7igGOmV8HaHXAFTop5igOOmV4Fa3fAFTgp5ikOOGZ6FazdAVfgpJinOOCY6VWwdgdcgZNinnI1gGPWXTVrd8DGUTtgB2zcA8bleQQ7YOMeMC7PI9gBG/eAcXkewQsHHNUvHHBUuBa+WAe8cJ9F9QsHHBWuhS/2fwAAAP//Da9jSwAAAAZJREFUAwDWEnGwV7oBDgAAAABJRU5ErkJggg\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAFc0lEQVR4Aeya22tcVRTGv3XSJJOUoiUyCT7U3qQFM/FJhdK+xEsRY8U0D6IPlhSLYMWHiv+CUBTR+iAWq4I3rL7UUkWrglWwElpJJkItVJEaM6FixNSZVHOW3x4nHZk6yQx92mvWYa9Z+xbY3/rN2vvMOUngl+kIOGDTeAEH7ICNR8C4PM9gB2w8AsbleQY7YOMRMC6vVTPYONaqPAdcjYXJmgM2ibUqygFXY2Gy5oBNYq2KcsDVWJisOWCTWKuiHHA1FiZrDtgk1qqoGsDVAa/ZiIADtsGxrgoHXDc0NgYcsA2OdVU44LqhsTHggG1wrKvCAdcNjY0BB2yDY10VLQU4X5jP/38k7Pa2FGCFHpsolH60i/NKZS0FuCL/3XyhdLxSN+9aBvCpqeINZZqKBxZUL5TrLfBhFvDYmLYv8puYLn3Q3iaPpdBVELyTiPzErXr/WdXOxTlWvVnAPRuwcnzm0q4AjmfvrQp0J5A/QnvRioXSgYnp4snFtkWfWBQVNK1bLbOiaX/IVGbszwL8KYKHOBY0b6eHiMzS1nPOJ5NTxTWhz5oFsaY05Qvzb14WpLqZ9Tu5Nc/Rg1n8IX1Kf/lOmvVX2Xc6TeRJenPFFGBm4n5VHc7PlA7nC6XfmZ1nSGyjQL6mD2VD+GB7ENBdqng8tGkJBCV6cyVZUlFkg8zGdQqdSYHzmuo42920g+y7tixFdSM07RAoz2J5TQQHyv1ASsBDlbopZwqwqK4VkTFR/CWJfKPAdgFGBTJLausBeRuSXGL/GxDZgXAJbqdLuH8fojdXTAHO9XXdkuvN7BTBPp67A8zUEyT2Mu1R2jlaAgGzWHugeoTtBwn2U/o9kGSe3lxJzCmioP5spk0gp1ll1vITeImfwwLcy3P3B4j8ynYob0HQyYw+mMt2LG7Xod+MJWaU1ApRbIbKqXK36ighfkSbJOSF0EfQK+j3sj0y0JvZx7rJYhew4G9m57/brsghggxljmDbgfQuEY4DL6apHjVJtiLKLGCexcPUWH6gQc8i1wA6TbBrgeRjgr6bnfwOYNtEoRjO59A0Z2YBB1Lcku+nr2jUKdZDOUvQuwn6q9AQET78kPdC3aJVxFuUxjxVPEdlPH8lSw/+Hu4PHpBXRDDIO+k1/BIsBI//XobqpgFL0vYMs/Uofy7NEOQOgYT/6Bghvxv5vHKOfRdpbeDbJfaZLKYBp0iZwTIdyAlwRCCjgISteYrQTwp/LgmwIBCz74dNA0aa8rxFuHZye76NdgKahmfOF4Hqq0MV3Qujl23AIqu5RT9Mdu8D0gfgF27Hv9GH8gSfQA/ybrqLh3P4TRz6zJltwMA4IK8T4iZm7jEA5deGgFwP4Hkk+EwERdZX5Qul8FiTVVvFNOBwA6VI7yDEMyJyTxmdYIhZPcX2fWyv5OvFrQKd7O/NbGPbXDENWBBuoJLj3IKHBPJdoEffka5IX+jPdm7iF+BZgv7ypmxmSxizaKYB82nWU8zWrbyJCq8OvyfAYW7VF27u6T7POvgM+lyYQ8hpaAf7XNXUedwU4BCA2CzX27Ull83szvVmCBvfKuSLpTRcNzP/9FLjsY2ZBxyAMEPLb5AIeYQWQIfuK4znsbBTaWZKSwBulBa/CLzhlkcanR/DPAdcS0nTw7VdMbcdcA29gb6uPTVdUTcdcNT4ll+8A14+RlHPcMBR41t+8Q54+Rgh5ikOOGZ6DazdATcQpJinOOCY6TWwdgfcQJBinuKAY6bXwNodcANBinmKA46ZXgNrd8ANBCnmKVcDOGbdLbN2B2wctQN2wMYjYFyeZ7ADNh4B4/I8gx2w8QgYl+cZ3DzgqP7CAUeFq/nFOuDmYxbVXzjgqHA1v9h/AAAA//9YMtJIAAAABklEQVQDAE8aWLDdp2FzAAAAAElFTkSuQmCC",
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
         "legendFormatting": {
