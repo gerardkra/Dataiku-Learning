@@ -1,0 +1,881 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnOrder": [],
+    "columnWidthsByName": {},
+    "columnUseScientificNotationByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "individualColumnsRules": [],
+      "valueColoringMode": "HASH",
+      "coloringGroups": []
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {},
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "engineType": "LINO",
+      "def": {
+        "id": "97f30c30",
+        "type": "lines",
+        "variant": "normal",
+        "name": "Avg of count_lag_diff by month and month",
+        "userEditedName": false,
+        "displayWithEChartsByDefault": true,
+        "genericDimension0": [
+          {
+            "numParams": {
+              "mode": "NONE",
+              "emptyBinsMode": "ZEROS",
+              "binSize": 100.0,
+              "niceBounds": false,
+              "customBinValues": [],
+              "nbBins": 30
+            },
+            "maxValues": 100,
+            "generateOthersCategory": true,
+            "forceLastPositionOthers": false,
+            "oneTickPerBin": "AUTO",
+            "filters": [],
+            "isA": "dimension",
+            "sort": {
+              "type": "NATURAL",
+              "sortId": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            },
+            "multiplier": "Auto",
+            "hideTrailingZeros": true,
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "column": "month",
+            "type": "NUMERICAL"
+          }
+        ],
+        "genericDimension1": [
+          {
+            "numParams": {
+              "mode": "FIXED_NB",
+              "emptyBinsMode": "ZEROS",
+              "binSize": 1.0,
+              "niceBounds": false,
+              "customBinValues": [],
+              "nbBins": 10
+            },
+            "maxValues": 5,
+            "generateOthersCategory": true,
+            "forceLastPositionOthers": false,
+            "oneTickPerBin": "AUTO",
+            "filters": [],
+            "isA": "dimension",
+            "sort": {
+              "type": "AGGREGATION",
+              "sortId": "count_lag_diff AVG 50  desc",
+              "measureIdx": 0,
+              "label": "Average of count_lag_diff, descending"
+            },
+            "multiplier": "Auto",
+            "hideTrailingZeros": true,
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "column": "station_agency_name",
+            "type": "ALPHANUM"
+          }
+        ],
+        "facetDimension": [],
+        "animationDimension": [],
+        "genericMeasures": [
+          {
+            "column": "count_lag_diff",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "isUnaggregated": false,
+            "uaComputeMode": "STACK",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "hideTrailingZeros": true,
+            "prefix": "",
+            "suffix": "",
+            "showValue": true,
+            "showDisplayLabel": true,
+            "labelPosition": "BOTTOM",
+            "percentile": 50.0,
+            "isCustomPercentile": false,
+            "kpiTextAlign": "CENTER",
+            "kpiValueFontSizeMode": "RESPONSIVE",
+            "kpiValueFontSize": 32,
+            "responsiveTextAreaFill": 100,
+            "valueTextFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "labelTextFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "valuesInChartDisplayOptions": {
+              "displayValues": true,
+              "textFormatting": {
+                "fontSize": 11,
+                "fontColor": "AUTO",
+                "hasBackground": false,
+                "backgroundColor": "#D9D9D9BF"
+              },
+              "addDetails": false,
+              "additionalMeasures": [],
+              "placementMode": "AUTO",
+              "spacing": 12
+            },
+            "colorRules": []
+          }
+        ],
+        "genericHierarchyDimension": [],
+        "yHierarchyDimension": [],
+        "xHierarchyDimension": [],
+        "groupHierarchyDimension": [],
+        "boxplotBreakdownHierarchyDimension": [],
+        "xDimension": [],
+        "yDimension": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "uaDimensionPair": [],
+        "uaSize": [],
+        "uaColor": [],
+        "uaShape": [],
+        "uaTooltip": [],
+        "groupDimension": [],
+        "xMeasure": [],
+        "yMeasure": [],
+        "colorMeasure": [],
+        "sizeMeasure": [],
+        "geometry": [],
+        "geoLayers": [
+          {
+            "geometry": [],
+            "colorOptions": {
+              "ccScaleMode": "NORMAL",
+              "paletteType": "CONTINUOUS",
+              "quantizationMode": "NONE",
+              "numQuantizeSteps": 5,
+              "paletteMiddleValue": 0.0,
+              "heatDensityMapIntensity": 0.5,
+              "heatDensityMapRadius": 0.5,
+              "singleColor": "#1f77b4",
+              "transparency": 0.75,
+              "colorPalette": "default_theme",
+              "customPalette": {
+                "id": "__dku_custom__",
+                "name": "Custom Palette",
+                "colors": [],
+                "values": [],
+                "fixedValues": false
+              },
+              "customColors": {}
+            },
+            "uaColor": []
+          }
+        ],
+        "tooltipMeasures": [],
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "filters": [],
+        "xAxisFormatting": {
+          "displayAxis": true,
+          "showAxisTitle": true,
+          "axisTitleFormatting": {
+            "fontSize": 15,
+            "fontColor": "#333333",
+            "hasBackground": false
+          },
+          "axisValuesFormatting": {
+            "numberFormatting": {
+              "multiplier": "Auto",
+              "hideTrailingZeros": true,
+              "digitGrouping": "DEFAULT",
+              "useParenthesesForNegativeValues": false,
+              "shouldFormatInPercentage": false,
+              "prefix": "",
+              "suffix": ""
+            },
+            "axisTicksFormatting": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            }
+          },
+          "ticksConfig": {
+            "mode": "INTERVAL"
+          },
+          "customExtent": {
+            "editMode": "AUTO",
+            "manualExtent": [
+              null,
+              null
+            ]
+          },
+          "isLogScale": false,
+          "includeZero": true
+        },
+        "yAxesFormatting": [
+          {
+            "id": "y_left_0",
+            "displayAxis": true,
+            "showAxisTitle": true,
+            "axisTitleFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false
+            },
+            "axisValuesFormatting": {
+              "numberFormatting": {
+                "multiplier": "Auto",
+                "hideTrailingZeros": true,
+                "digitGrouping": "DEFAULT",
+                "useParenthesesForNegativeValues": false,
+                "shouldFormatInPercentage": false,
+                "prefix": "",
+                "suffix": ""
+              },
+              "axisTicksFormatting": {
+                "fontSize": 12,
+                "fontColor": "#333333",
+                "hasBackground": false,
+                "fontFamily": "SourceSansPro"
+              }
+            },
+            "ticksConfig": {
+              "mode": "INTERVAL"
+            },
+            "customExtent": {
+              "editMode": "AUTO",
+              "manualExtent": [
+                null,
+                null
+              ]
+            },
+            "isLogScale": false,
+            "includeZero": true
+          },
+          {
+            "id": "y_right_0",
+            "displayAxis": true,
+            "showAxisTitle": true,
+            "axisTitleFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false
+            },
+            "axisValuesFormatting": {
+              "numberFormatting": {
+                "multiplier": "Auto",
+                "hideTrailingZeros": true,
+                "digitGrouping": "DEFAULT",
+                "useParenthesesForNegativeValues": false,
+                "shouldFormatInPercentage": false,
+                "prefix": "",
+                "suffix": ""
+              },
+              "axisTicksFormatting": {
+                "fontSize": 12,
+                "fontColor": "#333333",
+                "hasBackground": false,
+                "fontFamily": "SourceSansPro"
+              }
+            },
+            "ticksConfig": {
+              "mode": "INTERVAL"
+            },
+            "customExtent": {
+              "editMode": "AUTO",
+              "manualExtent": [
+                null,
+                null
+              ]
+            },
+            "isLogScale": false,
+            "includeZero": true
+          }
+        ],
+        "radialAxisFormatting": {
+          "showAxisTitle": false,
+          "axisValuesFormatting": {
+            "axisTicksFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            }
+          },
+          "ticksConfig": {
+            "mode": "INTERVAL"
+          },
+          "customExtent": {},
+          "isLogScale": false,
+          "includeZero": true
+        },
+        "smoothing": true,
+        "showLegend": true,
+        "strokeWidth": 2,
+        "fillOpacity": 0.6,
+        "tooltipOptions": {
+          "display": true
+        },
+        "hexbinRadius": 20,
+        "hexbinNumber": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "valuesInChartDisplayOptions": {
+          "displayValues": false,
+          "displayPieLabelsOrValues": true,
+          "displayMode": "LABELS",
+          "overlappingStrategy": "AUTO",
+          "textFormatting": {
+            "fontSize": 11,
+            "fontColor": "AUTO",
+            "hasBackground": false,
+            "backgroundColor": "#D9D9D9BF"
+          }
+        },
+        "stackedColumnsOptions": {
+          "totalsInChartDisplayOptions": {
+            "textFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333",
+              "hasBackground": false
+            },
+            "addDetails": false,
+            "placementMode": "AUTO",
+            "additionalMeasures": []
+          }
+        },
+        "chartHeight": 200,
+        "singleXAxis": true,
+        "multiTooltips": false,
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "colorMode": "UNIQUE_SCALE",
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "singleColor": "#1f77b4",
+          "transparency": 0.75,
+          "colorPalette": "default_theme",
+          "customPalette": {
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "colors": [],
+            "values": [],
+            "fixedValues": false
+          },
+          "customColors": {}
+        },
+        "colorGroups": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "drilldownOptions": {
+          "displayBreadcrumb": true
+        },
+        "scatterZoomOptions": {
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "translate": [
+            0.0,
+            0.0
+          ],
+          "chartWidth": 0.0,
+          "enabled": true,
+          "persisted": true
+        },
+        "waterfallOptions": {
+          "totalBarDisplayMode": "RIGHT",
+          "totalBarLabel": ""
+        },
+        "linesZoomOptions": {
+          "displayBrush": true,
+          "enabled": true,
+          "persisted": true
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false,
+          "connectPoints": {
+            "enabled": false,
+            "splitBy": "COLOR",
+            "lineFormatting": {
+              "color": "#000",
+              "size": 1
+            }
+          },
+          "optimizeRendering": false,
+          "regression": {
+            "show": false,
+            "displayFormula": false,
+            "type": "LINEAR",
+            "labelPosition": "INSIDE_END",
+            "lineFormatting": {
+              "color": "#000",
+              "size": 1
+            },
+            "textFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "backgroundColor": "#D9D9D9BF",
+              "fontFamily": "SourceSansPro"
+            }
+          },
+          "numberOfRecords": 1000000.0
+        },
+        "scatterMPOptions": {
+          "connectPoints": {
+            "enabled": false,
+            "splitBy": "COLOR",
+            "lineFormatting": {
+              "color": "#000",
+              "size": 1
+            }
+          },
+          "optimizeRendering": false,
+          "pairColorOptions": {
+            "singleColor": "#659a88",
+            "transparency": 0.75,
+            "colorPalette": "default_theme",
+            "customPalette": {
+              "id": "__dku_custom__",
+              "name": "Custom Palette",
+              "colors": [],
+              "values": [],
+              "fixedValues": false
+            },
+            "customColors": {}
+          },
+          "numberOfRecords": 1000000.0
+        },
+        "mapOptions": {
+          "tilesLayer": "cartodb-positron",
+          "lockSquareGrid": false
+        },
+        "mapGridOptions": {
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
+        },
+        "radarOptions": {
+          "filled": false,
+          "polygonsSource": "MEASURES",
+          "lineStyle": {
+            "width": 2.0,
+            "type": "SOLID"
+          }
+        },
+        "sankeyOptions": {
+          "curveness": 0.5,
+          "linkColorVariant": "GRADIENT",
+          "nodeLabelFormatting": {
+            "fontSize": 11,
+            "fontColor": "#333333",
+            "hasBackground": false,
+            "backgroundColor": "#D9D9D9BF",
+            "fontFamily": "SourceSansPro"
+          }
+        },
+        "gaugeOptions": {
+          "min": {
+            "sourceType": "Constant",
+            "percentile": 0.0,
+            "isCustomPercentile": false,
+            "constantValue": 0.0,
+            "constantDateValue": 0.0,
+            "defaultConstantValue": 0.0,
+            "ignoreExistingFilters": false
+          },
+          "max": {
+            "sourceType": "Constant",
+            "percentile": 0.0,
+            "isCustomPercentile": false,
+            "constantValue": 0.0,
+            "constantDateValue": 0.0,
+            "defaultConstantValue": 0.0,
+            "ignoreExistingFilters": false
+          },
+          "axis": {
+            "ticksConfig": {
+              "mode": "INTERVAL"
+            },
+            "axisValuesFormatting": {
+              "numberFormatting": {
+                "multiplier": "Auto",
+                "hideTrailingZeros": true,
+                "digitGrouping": "DEFAULT",
+                "useParenthesesForNegativeValues": false,
+                "shouldFormatInPercentage": false,
+                "prefix": "",
+                "suffix": ""
+              },
+              "axisTicksFormatting": {
+                "fontSize": 16,
+                "fontColor": "#333333",
+                "hasBackground": false,
+                "fontFamily": "SourceSansPro"
+              }
+            },
+            "thickness": 30,
+            "customRanges": false
+          },
+          "displayPointer": false
+        },
+        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
+        "useLiveProcessingIfAvailable": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "legendFormatting": {
+          "fontSize": 11,
+          "fontColor": "#333333",
+          "hasBackground": false
+        },
+        "pivotTableOptions": {
+          "displayEmptyValues": false,
+          "showSidebar": true,
+          "measureDisplayMode": "ROWS",
+          "displayTotals": {
+            "subTotals": {
+              "rows": true,
+              "columns": true
+            },
+            "grandTotal": {
+              "row": true,
+              "column": true
+            }
+          },
+          "tableFormatting": {
+            "showRowHeaders": true,
+            "showRowMainHeaders": true,
+            "rowMainHeaders": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "rowSubheaders": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "freezeRowHeaders": true,
+            "showColumnHeaders": true,
+            "showColumnMainHeaders": true,
+            "columnMainHeaders": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "columnSubheaders": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "values": {
+              "fontSize": 11,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "rowHeaders": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "columnHeaders": {
+              "fontSize": 12,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            }
+          },
+          "areRowsExpandedByDefault": true,
+          "areColumnExpandedByDefault": true,
+          "rowIdByCustomExpandedStatus": {},
+          "columnIdByCustomExpandedStatus": {},
+          "columnIdByCustomWidth": {}
+        },
+        "gridlinesOptions": {
+          "vertical": {
+            "show": false,
+            "lineFormatting": {
+              "type": "FILLED",
+              "color": "#d9d9d9",
+              "size": 1
+            }
+          },
+          "horizontal": {
+            "show": true,
+            "displayAxis": {
+              "type": "LEFT_Y_AXIS"
+            },
+            "lineFormatting": {
+              "type": "FILLED",
+              "color": "#d9d9d9",
+              "size": 1
+            }
+          }
+        }
+      },
+      "theme": {
+        "id": "__dku_dss_default_theme__",
+        "name": "Default",
+        "colors": [
+          "#1f77b4",
+          "#ff7f0e",
+          "#2ca02c",
+          "#d62728",
+          "#9467bd",
+          "#8c564b",
+          "#e377c2",
+          "#7f7f7f",
+          "#bcbd22",
+          "#17becf",
+          "#393b79",
+          "#6b6ecf",
+          "#637939",
+          "#b5cf6b",
+          "#8c6d31",
+          "#e7ba52",
+          "#843c39",
+          "#d6616b",
+          "#7b4173",
+          "#ce6dbd"
+        ],
+        "themePalettes": {
+          "discrete": {
+            "id": "default_theme",
+            "name": "Theme default",
+            "category": "BUILT_IN",
+            "colors": [
+              "#1f77b4",
+              "#A8D3F0",
+              "#ff7f0e",
+              "#FFC999",
+              "#2ca02c",
+              "#AFE9AF",
+              "#d62728",
+              "#EFA9A9",
+              "#9467bd",
+              "#CDB8E0",
+              "#8c564b",
+              "#DBC2BD",
+              "#e377c2",
+              "#EEAAD9",
+              "#7f7f7f",
+              "#CCCCCC",
+              "#bcbd22",
+              "#EFEFA9",
+              "#17becf",
+              "#A3EDF5",
+              "#393b79",
+              "#9698CE",
+              "#6b6ecf",
+              "#B2B4E6",
+              "#637939",
+              "#BBCE96",
+              "#7F9A32",
+              "#b5cf6b",
+              "#8c6d31",
+              "#DDC79D",
+              "#B38519",
+              "#e7ba52",
+              "#843c39",
+              "#D7A5A3",
+              "#d6616b",
+              "#EAAEB3",
+              "#7b4173",
+              "#D1A7CB",
+              "#ce6dbd",
+              "#E5B3DC"
+            ],
+            "sample": [
+              "#1f77b4",
+              "#A8D3F0",
+              "#ff7f0e",
+              "#FFC999",
+              "#2ca02c"
+            ],
+            "isCustom": false,
+            "createPairs": true
+          },
+          "continuous": [
+            {
+              "id": "default_theme",
+              "name": "Theme default",
+              "category": "BUILT_IN",
+              "colors": [
+                "#D3E9F8",
+                "#1F77B4"
+              ],
+              "isCustom": false
+            },
+            {
+              "id": "default_theme_rev",
+              "name": "Theme default (rev)",
+              "category": "BUILT_IN",
+              "colors": [
+                "#1F77B4",
+                "#D3E9F8"
+              ],
+              "isCustom": false
+            }
+          ],
+          "diverging": {
+            "id": "default_theme",
+            "name": "Theme default",
+            "category": "BUILT_IN",
+            "colors": [
+              "#1F77B4",
+              "#FFFFFF",
+              "#FF7F0E"
+            ],
+            "isCustom": false
+          }
+        },
+        "palettes": {
+          "discrete": "default_theme",
+          "continuous": "default_theme",
+          "diverging": "default_theme"
+        },
+        "generalFormatting": {
+          "fontSize": 11,
+          "fontColor": "#333333",
+          "hasBackground": false,
+          "fontFamily": "SourceSansPro"
+        },
+        "pageTitleFormatting": {
+          "fontSize": 28,
+          "fontColor": "#444444",
+          "hasBackground": false
+        },
+        "tileTitleFormatting": {
+          "fontSize": 13,
+          "fontColor": "#000000",
+          "hasBackground": false
+        },
+        "chartTitleFormatting": {
+          "fontSize": 15,
+          "fontColor": "#333333",
+          "hasBackground": false
+        },
+        "legendFormatting": {
+          "fontSize": 11,
+          "fontColor": "#333333",
+          "hasBackground": false
+        },
+        "pageTitleAlignment": "CENTER",
+        "backgroundColor": "#FFFFFF",
+        "tileSpacing": 8,
+        "tileFormatting": {
+          "borderOptions": {
+            "color": "#CCCCCC",
+            "radius": 0,
+            "size": 1
+          },
+          "backgroundOpacity": 1.0
+        },
+        "isCustomized": false,
+        "isBuiltIn": true
+      }
+    }
+  ],
+  "interactiveSearch": {
+    "savedQueries": []
+  },
+  "customMeasures": [],
+  "reusableDimensions": [],
+  "hierarchies": []
+}
