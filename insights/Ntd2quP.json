@@ -1,0 +1,23 @@
+{
+  "type": "web_app",
+  "params": {
+    "webAppSmartId": "Kp1SNbR",
+    "webAppType": "STANDARD"
+  },
+  "owner": "gerardkra30@gmail.com",
+  "listed": false,
+  "name": "Geo Analysis",
+  "dashboardCreationId": "GLIAUpH",
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "gerardkra30@gmail.com"
+    },
+    "lastModifiedOn": 1768314757663
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
