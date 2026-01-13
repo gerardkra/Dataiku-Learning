@@ -3,7 +3,7 @@ var map = L.map('map').setView([47, 3], 5);
 
 // Load OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+    attribution: '&copy; Arcgis contributors'
 }).addTo(map);
 
 
