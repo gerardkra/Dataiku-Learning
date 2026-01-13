@@ -57,7 +57,266 @@
     {
       "id": "BTfKU78",
       "grid": {
-        "tiles": []
+        "tiles": [
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 8
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showBrush": false,
+              "showBreadcrumb": false,
+              "inheritLegendPlacement": true,
+              "legendPlacement": "OUTER_RIGHT",
+              "showTooltips": true,
+              "autoPlayAnimation": true,
+              "useInsightTheme": false
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "YES",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "zJNVuNh",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 8
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showBrush": false,
+              "showBreadcrumb": false,
+              "inheritLegendPlacement": true,
+              "legendPlacement": "OUTER_RIGHT",
+              "showTooltips": true,
+              "autoPlayAnimation": true,
+              "useInsightTheme": false
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "YES",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "TcdPxbv",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 8
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showBrush": false,
+              "showBreadcrumb": false,
+              "inheritLegendPlacement": true,
+              "legendPlacement": "OUTER_RIGHT",
+              "showTooltips": true,
+              "autoPlayAnimation": true,
+              "useInsightTheme": false
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "YES",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "z46aMhl",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 8
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showBrush": false,
+              "showBreadcrumb": false,
+              "inheritLegendPlacement": true,
+              "legendPlacement": "OUTER_RIGHT",
+              "showTooltips": true,
+              "autoPlayAnimation": true,
+              "useInsightTheme": false
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "YES",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "D1ZYFzx",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 8
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showBrush": false,
+              "showBreadcrumb": false,
+              "inheritLegendPlacement": true,
+              "legendPlacement": "OUTER_RIGHT",
+              "showTooltips": true,
+              "autoPlayAnimation": true,
+              "useInsightTheme": false
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "YES",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "E2xdAiv",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 8
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showBrush": false,
+              "showBreadcrumb": false,
+              "inheritLegendPlacement": true,
+              "legendPlacement": "OUTER_RIGHT",
+              "showTooltips": true,
+              "autoPlayAnimation": true,
+              "useInsightTheme": false
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "YES",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "wdqIRrO",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          }
+        ]
       },
       "title": "Network Visualization",
       "show": true,
