@@ -105,7 +105,7 @@
       {"name":"adress","type":"string"},
       {"name":"latitude","type":"double"},
       {"name":"longitude","type":"double"},
-      {"name":"geopoint","type":"string"},
+      {"name":"geopoint","type":"geopoint"},
       {"name":"city","type":"string"},
       {"name":"department","type":"string"},
       {"name":"region","type":"string"},
