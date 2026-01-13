@@ -3,11 +3,46 @@
     {
       "id": "OLNCqq2",
       "grid": {
-        "tiles": []
+        "tiles": [
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 18,
+              "height": 12
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "loadTimeoutInSeconds": 0
+            },
+            "backgroundOpacity": 1.0,
+            "backgroundColor": "#ffffff",
+            "autoLoad": true,
+            "locked": false,
+            "borderOptions": {
+              "color": "#CCCCCC",
+              "radius": 0,
+              "size": 1
+            },
+            "titleOptions": {
+              "showTitle": "NO",
+              "fontColor": "#000000",
+              "fontSize": 13
+            },
+            "insightId": "Ntd2quP",
+            "insightType": "web_app",
+            "displayMode": "INSIGHT",
+            "useDashboardSpacing": true,
+            "tileSpacing": 8,
+            "padding": 0,
+            "resizeImageMode": "FIT_SIZE"
+          }
+        ]
       },
       "title": "Geo Analysis",
       "show": true,
-      "showTitle": false,
+      "showTitle": true,
       "titleAlign": "CENTER",
       "titleFontColor": "#444444",
       "titleFontSize": 28,
@@ -26,7 +61,7 @@
       },
       "title": "Network Visualization",
       "show": true,
-      "showTitle": false,
+      "showTitle": true,
       "titleAlign": "CENTER",
       "titleFontColor": "#444444",
       "titleFontSize": 28,
@@ -44,7 +79,7 @@
       },
       "title": "Capacity Planning",
       "show": true,
-      "showTitle": false,
+      "showTitle": true,
       "titleAlign": "CENTER",
       "titleFontColor": "#444444",
       "titleFontSize": 28,
