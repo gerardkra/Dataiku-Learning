@@ -1,7 +1,17 @@
 {
   "dashboardAuthorizations": {
     "allAuthorized": false,
-    "authorizations": []
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "Kp1SNbR",
+          "objectType": "WEB_APP"
+        },
+        "modes": [
+          "READ"
+        ]
+      }
+    ]
   },
   "exposedObjects": {
     "objects": []
