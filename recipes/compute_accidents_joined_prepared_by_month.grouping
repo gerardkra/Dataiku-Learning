@@ -7,7 +7,7 @@
       "conditions": [
         {
           "input": "year",
-          "col": "year",
+          "col": "id_num",
           "$showList": false,
           "num": 2012,
           "operator": "\u003e\u003d [number]"
@@ -579,6 +579,20 @@
   "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "region",
+          "col": "region",
+          "$showList": false,
+          "num": 0,
+          "operator": "not empty"
+        }
+      ]
+    },
     "$status": {
       "schema": {
         "columns": [
@@ -619,7 +633,7 @@
       }
     },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   },
   "selectAllColumns": false
 }
