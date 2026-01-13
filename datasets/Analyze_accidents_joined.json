@@ -117,7 +117,9 @@
       {"name":"station_join_distance","type":"double"},
       {"name":"garage_name","type":"string"},
       {"name":"garage_geopoint","type":"geopoint"},
-      {"name":"garage_join_distance","type":"double"}
+      {"name":"garage_join_distance","type":"double"},
+      {"name":"effective_network","type":"string"},
+      {"name":"effective_distance","type":"double"}
     ],
     "userModified": true
   },
