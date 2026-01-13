@@ -1,3 +1,12 @@
+// Initialize the map
+var map = L.map('map').setView([46.5, 2.5], 6);
+
+// Load OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+
 dataiku.fetch('rental_agencies_geocode', {
     sampling : "head",
     limit : 20000
