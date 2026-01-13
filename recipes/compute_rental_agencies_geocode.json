@@ -9,7 +9,7 @@
       "batch_size_uscensus": 1000,
       "column_prefix": "geo",
       "address_column": "address_full",
-      "provider": "osm"
+      "provider": "arcgis"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
