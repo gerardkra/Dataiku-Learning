@@ -1,6 +1,6 @@
-dataiku.fetch('garage_locations_prepared', {
+dataiku.fetch('accidents_database_prepared', {
     sampling : "random",
-    limit : 200
+    limit : 10000
   }, function (df) {
 
     // Add a map marker for each row on the dataset
@@ -12,16 +12,16 @@ dataiku.fetch('garage_locations_prepared', {
       // Replace by your own column names here
       var lat = parseFloat(record["latitude"]);
       var lon = parseFloat(record["longitude"]);
-      var name = record["name"];
+      var collision = record["collision"];
 
       // Radius of the marker is in meters
-      var radius = 15000;
+      var radius = 1;
 
       var marker = new L.circle([lat, lon], radius, {
-          color: 'blue',
-          fillColor: 'blue',
+          color: 'red',
+          fillColor: 'red',
           fillOpacity: 0.2
-        }).bindPopup("Name: <strong>" + name + "</strong>");
+        }).bindPopup("Number of collisions: <strong>" + collision + "</strong>");
 
         marker.addTo(map);
       };
