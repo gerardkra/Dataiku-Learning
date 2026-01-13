@@ -26,6 +26,32 @@ dataiku.fetch('rental_agencies_geocode', {
 });
 
 
+dataiku.fetch('accidents_database_prepared', {
+    sampling : "random",
+    limit : 10000
+}, function (df) {
+
+    var nbRows = df.getNbRows();
+    for (var i = 0; i < nbRows; i++) {
+        var record = df.getRecord(i);
+
+        var lat = parseFloat(record["latitude"]);
+        var lon = parseFloat(record["longitude"]);
+        var collision = record["collision"];
+
+        var radius = 1;
+
+        var marker = new L.circle([lat, lon], radius, {
+            color: 'red',
+            fillColor: 'red',
+            fillOpacity: 0.2
+        }).bindPopup("Number of collisions: <strong>" + collision + "</strong>");
+
+        marker.addTo(map);
+    }
+});
+
+
 dataiku.fetch('garage_locations_prepared', {
     sampling : "random",
     limit : 200
