@@ -5,7 +5,7 @@
       "grid": {
         "tiles": []
       },
-      "title": "",
+      "title": "Geo Analysis",
       "show": true,
       "showTitle": false,
       "titleAlign": "CENTER",
@@ -17,6 +17,42 @@
       "filtersParams": {
         "panelPosition": "TOP",
         "engineType": "LINO"
+      }
+    },
+    {
+      "id": "BTfKU78",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Network Visualization",
+      "show": true,
+      "showTitle": false,
+      "titleAlign": "CENTER",
+      "titleFontColor": "#444444",
+      "titleFontSize": 28,
+      "enableCrossFilters": true,
+      "backgroundColor": "#FFFFFF",
+      "showFilterPanel": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      }
+    },
+    {
+      "id": "y4OV7rA",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Capacity Planning",
+      "show": true,
+      "showTitle": false,
+      "titleAlign": "CENTER",
+      "titleFontColor": "#444444",
+      "titleFontSize": 28,
+      "enableCrossFilters": true,
+      "backgroundColor": "#FFFFFF",
+      "showFilterPanel": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
       }
     }
   ],
