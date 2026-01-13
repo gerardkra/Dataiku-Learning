@@ -5,6 +5,7 @@
       "grid": {
         "tiles": []
       },
+      "title": "Network Optimization Dashboard",
       "show": true,
       "showTitle": false,
       "titleAlign": "CENTER",
