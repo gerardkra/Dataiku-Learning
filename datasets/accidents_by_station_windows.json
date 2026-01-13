@@ -96,7 +96,10 @@
       {"name":"month","type":"bigint"},
       {"name":"station_agency_name","type":"string"},
       {"name":"station_join_distance_avg","type":"double"},
-      {"name":"count","type":"bigint"}
+      {"name":"count","type":"bigint"},
+      {"name":"station_join_distance_avg_max","type":"double"},
+      {"name":"count_avg","type":"double"},
+      {"name":"count_lag_diff","type":"bigint"}
     ],
     "userModified": true
   },
