@@ -63,7 +63,7 @@
     "main": {
       "items": [
         {
-          "ref": "Analyze_accidents_joined",
+          "ref": "accidents_joined_prepared",
           "appendMode": false
         }
       ]
