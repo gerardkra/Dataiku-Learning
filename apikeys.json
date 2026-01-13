@@ -1,7 +1,68 @@
 [
   {
     "execSQLLike": false,
-    "localDatasets": [],
+    "localDatasets": [
+      {
+        "datasets": [
+          "accidents_database"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "accidents_database_prepared"
+        ],
+        "privileges": [
+          "READ_DATA"
+        ]
+      },
+      {
+        "datasets": [
+          "accidents_joined"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "accidents_joined_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "garage_locations"
+        ],
+        "privileges": [
+          "READ_DATA"
+        ]
+      },
+      {
+        "datasets": [
+          "garage_locations_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "rental_agencies"
+        ],
+        "privileges": [
+          "READ_DATA"
+        ]
+      },
+      {
+        "datasets": [
+          "rental_agencies_geocode"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "rental_agencies_prepared"
+        ],
+        "privileges": []
+      }
+    ],
     "projectPrivileges": {
       "admin": false,
       "editPermissions": false,
