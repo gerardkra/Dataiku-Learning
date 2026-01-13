@@ -100,7 +100,8 @@
       {"name":"station_join_distance_avg","type":"double"},
       {"name":"garage_name_distinct","type":"bigint"},
       {"name":"garage_join_distance_avg","type":"double"},
-      {"name":"count","type":"bigint"}
+      {"name":"count","type":"bigint"},
+      {"name":"capacity_ratio","type":"double"}
     ],
     "userModified": true
   },
