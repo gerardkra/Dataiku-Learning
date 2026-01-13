@@ -94,6 +94,12 @@
   "schema": {
     "columns": [
       {"name":"month","type":"bigint"},
+      {"name":"region","type":"string"},
+      {"name":"collision_avg","type":"double"},
+      {"name":"station_agency_name_distinct","type":"bigint"},
+      {"name":"station_join_distance_avg","type":"double"},
+      {"name":"garage_name_distinct","type":"bigint"},
+      {"name":"garage_join_distance_avg","type":"double"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
