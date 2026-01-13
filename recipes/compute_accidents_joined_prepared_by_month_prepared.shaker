@@ -1,6 +1,44 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "month"
+      },
+      {
+        "d": true,
+        "name": "region"
+      },
+      {
+        "d": true,
+        "name": "collision_avg"
+      },
+      {
+        "d": true,
+        "name": "station_agency_name_distinct"
+      },
+      {
+        "d": true,
+        "name": "station_join_distance_avg"
+      },
+      {
+        "d": true,
+        "name": "garage_name_distinct"
+      },
+      {
+        "d": true,
+        "name": "garage_join_distance_avg"
+      },
+      {
+        "d": true,
+        "name": "count"
+      },
+      {
+        "d": true,
+        "name": "capacity_ratio"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +68,24 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "count/station_agency_name_distinct",
+        "column": "capacity_ratio",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -58,7 +112,17 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "collision_avg": 141,
+    "station_agency_name_distinct": 225,
+    "month": 100,
+    "garage_join_distance_avg": 218,
+    "garage_name_distinct": 165,
+    "count": 100,
+    "station_join_distance_avg": 225,
+    "capacity_ratio": 148,
+    "region": 197
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
