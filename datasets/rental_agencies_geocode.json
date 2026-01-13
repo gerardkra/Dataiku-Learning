@@ -98,8 +98,8 @@
       {"name":"zipcode","type":"bigint"},
       {"name":"city","type":"string"},
       {"name":"address_full","type":"string"},
-      {"name":"geolatitude","type":"string"},
-      {"name":"geolongitude","type":"string"}
+      {"name":"geolatitude","type":"double"},
+      {"name":"geolongitude","type":"double"}
     ],
     "userModified": false
   },
