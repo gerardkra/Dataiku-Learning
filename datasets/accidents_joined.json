@@ -116,7 +116,7 @@
       {"name":"station_geolongitude","type":"string"},
       {"name":"station_join_distance","type":"string"},
       {"name":"garage_name","type":"string"},
-      {"name":"garage_geopoint","type":"string"},
+      {"name":"garage_geopoint","type":"geopoint"},
       {"name":"garage_join_distance","type":"double"}
     ],
     "userModified": true
