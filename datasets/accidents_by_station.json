@@ -94,6 +94,8 @@
   "schema": {
     "columns": [
       {"name":"month","type":"bigint"},
+      {"name":"station_agency_name","type":"string"},
+      {"name":"station_join_distance_avg","type":"double"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
