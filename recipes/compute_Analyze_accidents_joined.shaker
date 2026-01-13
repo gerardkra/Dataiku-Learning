@@ -1,6 +1,116 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "id_num"
+      },
+      {
+        "d": true,
+        "name": "year"
+      },
+      {
+        "d": true,
+        "name": "month"
+      },
+      {
+        "d": true,
+        "name": "day"
+      },
+      {
+        "d": true,
+        "name": "hrmn"
+      },
+      {
+        "d": true,
+        "name": "datetime"
+      },
+      {
+        "d": true,
+        "name": "weekofyear"
+      },
+      {
+        "d": true,
+        "name": "agglomeration"
+      },
+      {
+        "d": true,
+        "name": "collision"
+      },
+      {
+        "d": true,
+        "name": "adress"
+      },
+      {
+        "d": true,
+        "name": "latitude"
+      },
+      {
+        "d": true,
+        "name": "longitude"
+      },
+      {
+        "d": true,
+        "name": "geopoint"
+      },
+      {
+        "d": true,
+        "name": "city"
+      },
+      {
+        "d": true,
+        "name": "department"
+      },
+      {
+        "d": true,
+        "name": "region"
+      },
+      {
+        "d": true,
+        "name": "country_iso"
+      },
+      {
+        "d": true,
+        "name": "country"
+      },
+      {
+        "d": true,
+        "name": "station_agency_name"
+      },
+      {
+        "d": true,
+        "name": "station_geolatitude"
+      },
+      {
+        "d": true,
+        "name": "station_geolongitude"
+      },
+      {
+        "d": true,
+        "name": "station_join_distance"
+      },
+      {
+        "d": true,
+        "name": "garage_name"
+      },
+      {
+        "d": true,
+        "name": "garage_geopoint"
+      },
+      {
+        "d": true,
+        "name": "garage_join_distance"
+      },
+      {
+        "d": true,
+        "name": "effective_network"
+      },
+      {
+        "d": true,
+        "name": "effective_distance"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +140,36 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(station_join_distance \u003e 15 \u0026\u0026 garage_join_distance \u003c station_join_distance,\n    \"garage\",\"station\")",
+        "column": "effective_network",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(effective_network\u003d\u003d\"garage\",garage_join_distance,station_join_distance)",
+        "column": "effective_distance",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -58,7 +196,35 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "country": 100,
+    "effective_network": 143,
+    "year": 100,
+    "city": 183,
+    "latitude": 134,
+    "agglomeration": 113,
+    "adress": 127,
+    "datetime": 183,
+    "station_agency_name": 218,
+    "hrmn": 100,
+    "garage_join_distance": 165,
+    "department": 127,
+    "day": 100,
+    "country_iso": 100,
+    "longitude": 134,
+    "station_geolatitude": 183,
+    "garage_geopoint": 300,
+    "geopoint": 183,
+    "effective_distance": 150,
+    "station_geolongitude": 190,
+    "garage_name": 300,
+    "station_join_distance": 173,
+    "collision": 100,
+    "month": 100,
+    "id_num": 100,
+    "weekofyear": 100,
+    "region": 197
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
