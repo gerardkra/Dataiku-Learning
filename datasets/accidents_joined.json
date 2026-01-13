@@ -112,7 +112,7 @@
       {"name":"country_iso","type":"string"},
       {"name":"country","type":"string"},
       {"name":"station_agency_name","type":"string"},
-      {"name":"station_geolatitude","type":"string"},
+      {"name":"station_geolatitude","type":"double"},
       {"name":"station_geolongitude","type":"double"},
       {"name":"station_join_distance","type":"double"},
       {"name":"garage_name","type":"string"},
